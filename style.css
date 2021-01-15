@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color: whitesmoke;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 1.6rem 0;
+    /*html etiketleri arasındaki font-size 10px olduğu için padding değerleri üstten alttan 16px otomatik olarak kendini ayarlayacaktır.*/
+    font-size: 3rem;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*header*/
+
+header {
+    height: 45rem;
+    /*uzunluğu 450px'e tekabül edecek*/
+}
+
+header .bg-image {
+    position: absolute;
+    background-image: url(img/bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 45rem;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+header h1 {
+    /*Yazımızı ortalayalım*/
+    padding: 11rem;
+    /*110px*/
+    padding-bottom: 0;
+    letter-spacing: 5px;
+    word-spacing: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+}
+
+.awesome {
+    padding: 0.2em;
+    color: #D58143;
+    position: fixed;
+    font-size: 35px;
+    left: 0;
+    top: 1;
+    margin-top: 15px;
+    margin-left: 10px;
+    transition: all 1s;
+    opacity: 0.4;
+}
+
+.awesome:hover {
+    font-size: 42px;
+    opacity: 0.8;
+
+}
+
+.btn {
+    font-size: 15px;
+    background-color: #333;
+    color: #fff;
+    border: 3px solid #666;
+    padding: 1.6rem 3.2rem;
+    margin: .5rem 0;
+    border-radius: 5px;
+    /*5px yukarıdan aşağıdan,sağdan soldan 0px*/
+    display: inline-block;
+    transition: all 0.3s;
+    transition-timing-function: linear;
+}
+
+.btn:hover {
+    background-color: #eaeaea;
+    color: #333;
+    margin: 1px 0;
+    font-size: 18px;
+}
+
+/*section-a*/
+
+#section-a {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 3.2rem 0;
+}
+
+#section-a h2 i {
+    font-size: 20px;
+    color: black;
+    transition-timing-function: ease-in-out;
+    transition: all 0.5s;
+}
+
+#section-a h2 i:hover {
+    font-size: 25px;
+    margin-right: 6px;
+    color: #5558AE;
+}
+
+/*section-b*/
+#section-b {
+    padding: 1.5rem;
+
+}
+
+#section-b ul {
+    list-style: none;
+}
+
+#section-b li {
+    background: #fff;
+    color: #333;
+    margin: 2.5em 5em;
+}
+
+.col-content {
+    padding: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*section-c*/
+
+#section-c {
+    background: #eaeaea;
+    color: #333;
+    padding: 5rem;
+}
+
+#section-c h2 i {
+    margin-right: 3px;
+    font-size: 20px;
+    transition-timing-function: ease-in-out;
+    transition: all 0.5s;
+
+}
+
+#section-c h2 i:hover {
+    margin-right: 8px;
+    font-size: 25px;
+}
+
+/*section-d*/
+
+#section-d .box {
+    padding: 5rem;
+}
+
+#section-d .box:first-child {
+    background-color: #2690d4;
+}
+
+#section-d h2 i {
+    font-size: 25px;
+    transition: font-size 0.5s;
+    margin-right: 3px;
+    transition-timing-function: ease-in-out;
+}
+
+#section-d h2 i:hover {
+    font-size: 35px;
+    margin-right: 6px;
+}
+
+/*footer*/
+
+footer {
+    padding: 4rem;
+    background: #000;
+}
+
+footer a {
+    color: #2690d4;
+}
+
+/*responsive desing for desktop*/
+
+@media screen and(min-width:800px) {
+
+    /*800 px ve üzerisin için : */
+    #section-b li {
+        width: 28%;
+        margin: 1%;
+        display: inline-block;
+    }
+
+    .box {
+        width: 50%;
+        float: left;
+    }
+
+    /*html font büyüklüğünü 800px ve yukarısı için ezelim ve 800px ve yukarısı için font büyüklüğü 10px yapalım*/
+
+    html {
+        font-size: 10px;
+    }
+
+}
+
+
+@media screen and(min-width:1200px) {
+
+    /*1200 px ve yukarısı için*/
+    html {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*navbar*/
+
+.nav {
+    background-color: #721517;
+    position: sticky;
+    top: 0px;
+    opacity: 0.6;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    letter-spacing: .1rem;
+}
+
+.nav ul {
+    overflow: hidden;
+    list-style-type: none;
+}
+
+.nav li {
+    float:left;
+}
+
+.nav li a {
+    display: inline-block;
+    color: whitesmoke;
+    padding: 2rem 2.2rem;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.8;
+    transition: background-color 0.3s linear;
+    margin: .1rem;
+    
+}
+
+.nav li a:hover {
+    background-color: #7B7D7D;
+}
